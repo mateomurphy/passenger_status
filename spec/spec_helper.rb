@@ -7,6 +7,10 @@ require 'passenger_status'
 # in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
+def xml_file
+  File.open(File.join(File.dirname(__FILE__), 'fixtures', 'passenger_status.xml'))
+end
+
 RSpec.configure do |config|
   
 end

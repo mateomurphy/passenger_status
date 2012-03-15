@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="iso8859-1" ?>
+<info>
+  <active>0</active>
+  <count>3</count>
+  <max>6</max>
+  <global_queue_size>0</global_queue_size>
+  <groups>
+    <group>
+      <app_root>/home/neken/www/nkncloud_production/current</app_root>
+      <name>/home/neken/www/nkncloud_production/current</name>
+      <environment>production</environment>
+      <processes>
+        <process>
+          <pid>13851</pid>
+          <gupid>152b46d-SHlh4vazuA0</gupid>
+          <sessions>0</sessions>
+          <processed>73</processed>
+          <uptime>10m 56s</uptime>
+          <has_metrics>true</has_metrics>
+          <cpu>1</cpu>
+          <rss>185076</rss>
+          <pss>120851</pss>
+          <private_dirty>98888</private_dirty>
+          <swap>2288</swap>
+          <real_memory>101176</real_memory>
+          <vmsize>909816</vmsize>
+          <process_group_id>21947</process_group_id>
+          <command>Rack: /home/neken/www/nkncloud_production/current</command>
+          <connect_password>nu9GpKfJBMkFXk7ARUskl7EU99hYlpbwDAuUgT0SEmj</connect_password>
+          <server_sockets>
+            <server_socket>
+              <name>http</name>
+              <address>127.0.0.1:36577</address>
+              <type>tcp</type>
+            </server_socket>
+            <server_socket>
+              <name>main</name>
+              <address>/tmp/passenger.1.0.21943/generation-0/backends/ruby.ZPozK2JCzbY5zkRVy0qkIgrkVVT7qWwVmblvshl8KdE55Zlj4f02Z3E</address>
+              <type>unix</type>
+            </server_socket>
+          </server_sockets>
+        </process>
+        <process>
+          <pid>14116</pid>
+          <gupid>152b474-w4QD5GMa3fY</gupid>
+          <sessions>0</sessions>
+          <processed>5</processed>
+          <uptime>4m 23s</uptime>
+          <has_metrics>true</has_metrics>
+          <cpu>0</cpu>
+          <rss>170872</rss>
+          <pss>105672</pss>
+          <private_dirty>82892</private_dirty>
+          <swap>2080</swap>
+          <real_memory>84972</real_memory>
+          <vmsize>896720</vmsize>
+          <process_group_id>21947</process_group_id>
+          <command>Rack: /home/neken/www/nkncloud_production/current</command>
+          <connect_password>TxqcvzeG33hrKvXbMxSRq0UssiOyxHuvBApbCP7bILD</connect_password>
+          <server_sockets>
+            <server_socket>
+              <name>http</name>
+              <address>127.0.0.1:46611</address>
+              <type>tcp</type>
+            </server_socket>
+            <server_socket>
+              <name>main</name>
+              <address>/tmp/passenger.1.0.21943/generation-0/backends/ruby.MAhdY64reVZUDzaX03y7IeYIuVP8EXzRhzYk7lSelK0DDUYdpRw8mYW</address>
+              <type>unix</type>
+            </server_socket>
+          </server_sockets>
+        </process>
+        <process>
+          <pid>13878</pid>
+          <gupid>152b46e-cBLwc6JMpcA</gupid>
+          <sessions>0</sessions>
+          <processed>41</processed>
+          <uptime>10m 28s</uptime>
+          <has_metrics>true</has_metrics>
+          <cpu>1</cpu>
+          <rss>190260</rss>
+          <pss>126113</pss>
+          <private_dirty>103900</private_dirty>
+          <swap>3956</swap>
+          <real_memory>107856</real_memory>
+          <vmsize>919408</vmsize>
+          <process_group_id>21947</process_group_id>
+          <command>Rack: /home/neken/www/nkncloud_production/current</command>
+          <connect_password>CTBobgGM6GWSLeUuln85N9yyVQl98SwcyCKfeICSjW8</connect_password>
+          <server_sockets>
+            <server_socket>
+              <name>http</name>
+              <address>127.0.0.1:53487</address>
+              <type>tcp</type>
+            </server_socket>
+            <server_socket>
+              <name>main</name>
+              <address>/tmp/passenger.1.0.21943/generation-0/backends/ruby.hsUNsgYVfVvCcaB870ruJKvTA91lMQfnBpg0dwZ0uJupadFblWlLpV1</address>
+              <type>unix</type>
+            </server_socket>
+          </server_sockets>
+        </process>
+      </processes>
+    </group>
+  </groups>
+</info>
+
