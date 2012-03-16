@@ -4,8 +4,8 @@ module PassengerStatus
   
     attr_reader :data, :active, :count, :max, :global_queue_size, :groups
   
-    def initialize(data)
-      @data = Nokogiri::XML::Document.parse(data)
+    def initialize(system)
+      @data = Nokogiri::XML::Document.parse(system.data)
       @active = @data.xpath('.//active').first.content.to_i
       @count = @data.xpath('.//count').first.content.to_i
       @max = @data.xpath('.//max').first.content.to_i

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module PassengerStatus
   describe Process do
-    subject { PassengerStatus.new(xml_file).groups.first.processes.first }
+    subject { PassengerStatus.new(test_system).groups.first.processes.first }
     its(:pid) { should == 13851 }
     its(:gupid) { should == '152b46d-SHlh4vazuA0' }
     its(:sessions) { should == 0 }

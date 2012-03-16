@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module PassengerStatus
   describe Group do
-    subject { PassengerStatus.new(xml_file).groups.first }
+    subject { PassengerStatus.new(test_system).groups.first }
     its(:app_root) { should == '/home/neken/www/nkncloud_production/current' }  
     its(:name) { should == '/home/neken/www/nkncloud_production/current' }  
     its(:environment) { should == 'production' }

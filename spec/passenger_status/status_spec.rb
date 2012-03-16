@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module PassengerStatus
   describe Status do
-    subject { PassengerStatus.new(xml_file) }
+    subject { PassengerStatus.new(test_system) }
     specify { subject.data.should_not be_nil }
     its(:active) { should == 0 }
     its(:count) { should == 3 }

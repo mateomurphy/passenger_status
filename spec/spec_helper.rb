@@ -7,8 +7,9 @@ require 'passenger_status'
 # in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
-def xml_file
-  File.open(File.join(File.dirname(__FILE__), 'fixtures', 'passenger_status.xml'))
+def test_system
+  xml_file = File.open(File.join(File.dirname(__FILE__), 'fixtures', 'passenger_status.xml'))
+  PassengerStatus::TestSystem.new(xml_file)
 end
 
 RSpec.configure do |config|

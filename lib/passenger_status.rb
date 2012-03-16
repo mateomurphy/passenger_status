@@ -6,7 +6,10 @@ require 'passenger_status/process'
 require 'passenger_status/server_socket'
 
 module PassengerStatus
-  def self.new(*args)
-    Status.new(*args)
+  autoload :System, 'passenger_status/system'
+  autoload :TestSystem, 'passenger_status/test_system'  
+  
+  def self.new(system = System)
+    Status.new(system)
   end
 end
