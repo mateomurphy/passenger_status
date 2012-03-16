@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+threshold = ARGV.first || 100000
+PassengerStatus.new
