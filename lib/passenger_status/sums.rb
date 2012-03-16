@@ -1,5 +1,5 @@
 module PassengerStatus
-  module Sums
+  module Collection
     def rss
       @rss ||= children.inject(0) { |sum, o| sum + o.rss }
     end      
@@ -22,6 +22,10 @@ module PassengerStatus
   
     def vmsize
       @vmsize ||= children.inject(0) { |sum, o| sum + o.vmsize }      
-    end    
+    end
+    
+    def prune(threshold)
+      children.each { |c| c.prune(threshold)}
+    end
   end
 end  

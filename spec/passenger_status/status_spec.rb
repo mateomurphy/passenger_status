@@ -15,5 +15,15 @@ module PassengerStatus
     its(:swap) { should == 8324 }
     its(:real_memory) { should == 294004 }
     its(:vmsize) { should == 2725944 }
+    
+    specify do
+      subject.prune(100000)
+      subject.system.commands.should == ["kill -9 13851", "kill -9 13878"]
+    end    
+
+    specify do
+      subject.prune(200000)
+      subject.system.commands.should == []
+    end    
   end
 end

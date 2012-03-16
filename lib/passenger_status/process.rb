@@ -1,11 +1,12 @@
 module PassengerStatus
   class Process
     
-    attr_reader :data, :pid, :gupid, :sessions, :processed, :uptime, :has_metrics, 
+    attr_reader :system, :data, :pid, :gupid, :sessions, :processed, :uptime, :has_metrics, 
       :cpu, :rss, :pss, :private_dirty, :swap, :real_memory, :vmsize, 
       :process_group_id, :command, :connect_password, :server_sockets
     
-    def initialize(data)
+    def initialize(system, data)
+      @system = system
       @data = data
       @pid = @data.xpath('.//pid').first.content.to_i
       @gupid  = @data.xpath('.//gupid').first.content
@@ -24,9 +25,16 @@ module PassengerStatus
       @command = @data.xpath('.//command').first.content
       @connect_password = @data.xpath('.//connect_password').first.content
       @server_sockets = @data.xpath('.//server_socket').map do |socket|
-        ServerSocket.new(socket)
+        ServerSocket.new(system, socket)
       end
-      
+    end
+
+    def kill
+      @system.kill(@pid)
+    end
+    
+    def prune(threshold)
+      kill if real_memory > threshold
     end
     
   end

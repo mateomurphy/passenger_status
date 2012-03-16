@@ -20,5 +20,20 @@ module PassengerStatus
     its(:command) { should == 'Rack: /home/neken/www/nkncloud_production/current' }
     its(:connect_password) { should == 'nu9GpKfJBMkFXk7ARUskl7EU99hYlpbwDAuUgT0SEmj' }
     its(:'server_sockets.count') { should == 2 }
+    
+    specify do
+      subject.kill
+      subject.system.commands.should == ['kill -9 13851']
+    end
+    
+    specify do
+      subject.prune(100000)
+      subject.system.commands.should == ['kill -9 13851']      
+    end
+
+    specify do
+      subject.prune(200000)
+      subject.system.commands.should == []
+    end
   end
 end
