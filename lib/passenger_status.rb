@@ -1,5 +1,5 @@
 require 'nokogiri'
-require 'passenger_status/sums'
+require 'passenger_status/collection'
 require 'passenger_status/status'
 require 'passenger_status/group'
 require 'passenger_status/process'
