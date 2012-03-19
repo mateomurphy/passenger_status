@@ -1,4 +1,32 @@
 #!/usr/bin/env ruby
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
-threshold = ARGV.first || 100000
-PassengerStatus.new
+
+require "rubygems"
+require "bundler/setup"
+require 'trollop'
+require 'logger'
+require 'passenger_status'
+
+PassengerStatus.logger.level = Logger::DEBUG
+PassengerStatus.logger.formatter = proc { |severity, datetime, progname, msg| "#{datetime}: #{msg}\n" }
+
+options = Trollop::options do
+  opt :threshold, "Set a maximum memory use for passenger processes", :type => :int
+end
+
+
+begin
+  status = PassengerStatus.new
+  
+  if options[:threshold]
+    status.prune(options[:threshold])
+  end
+
+  exit(0)
+rescue Cocaine::CommandNotFoundError => e
+  puts "passenger-status was not found on this system. Is passenger installed?"
+  exit(1)
+rescue StandardError => e
+  puts e.inspect
+  exit(1)
+end
