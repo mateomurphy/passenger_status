@@ -9,7 +9,13 @@ module PassengerStatus
   autoload :System, 'passenger_status/system'
   autoload :TestSystem, 'passenger_status/test_system'  
   
-  def self.new(system = System)
+  @@logger = Logger.new(STDOUT)
+  
+  def self.logger
+    @@logger
+  end
+  
+  def self.new(system = System.new)
     Status.new(system)
   end
 end
