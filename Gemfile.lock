@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    cocaine (0.2.0)
     diff-lcs (1.1.3)
     git (1.2.5)
     jeweler (1.6.4)
@@ -18,13 +19,16 @@ GEM
     rspec-expectations (2.3.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.3.0)
+    trollop (1.16.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bundler (~> 1.0.0)
+  cocaine
   jeweler (~> 1.6.3)
   nokogiri
   rcov
   rspec (~> 2.3.0)
+  trollop
